@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -6,12 +7,12 @@
   <title>1º PELOTÃO</title>
   <style>
     :root{
-      --bg:#0f172a;        /* slate-900 */
-      --card:#111827;      /* gray-900 */
-      --muted:#94a3b8;     /* slate-400 */
-      --accent:#22d3ee;    /* cyan-400 */
-      --text:#e5e7eb;      /* gray-200 */
-      --ring:#475569;      /* slate-600 */
+      --bg:#0f172a;
+      --card:#111827;
+      --muted:#94a3b8;
+      --accent:#22d3ee;
+      --text:#e5e7eb;
+      --ring:#475569;
     }
     *{box-sizing:border-box}
     body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial; background:radial-gradient(1200px 700px at 80% -10%, #1f2937, transparent), var(--bg); color:var(--text)}
@@ -20,7 +21,6 @@
     header h1{font-size:clamp(18px, 2.5vw, 28px); margin:0}
     main{max-width:1100px; margin:24px auto; padding:0 16px}
 
-    /* Tabs */
     .tabs{display:flex; gap:10px; margin-bottom:16px; justify-content:center; flex-wrap:wrap}
     .tab-btn{appearance:none; border:1px solid var(--ring); background:#0b1324; color:var(--text); padding:10px 14px; border-radius:12px; cursor:pointer; transition:.2s ease; font-weight:600}
     .tab-btn:hover{border-color:#64748b}
@@ -30,79 +30,53 @@
 
     .hint{color:var(--muted); font-size:13px; margin:10px 4px}
 
-    /* Embeds */
     .sheet-wrap{height:70vh}
     .sheet-wrap iframe{width:100%; height:100%; border:0; border-radius:12px}
 
-    /* Missões (Docs) */
     .doc-embed{width:100%; height:650px; border:0; border-radius:12px}
     .actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
     .btn{padding:8px 14px; border-radius:10px; border:1px solid var(--ring); background:#0b1324; color:var(--text); font-weight:600; cursor:pointer}
     .btn.primary{background:var(--accent); color:#000; border-color:transparent}
 
-    /* Brado */
     .brado{display:grid; place-items:center; min-height:200px; text-align:center; padding:20px}
     .brado-text{font-size:clamp(22px, 4vw, 40px); font-weight:900; letter-spacing:1px; line-height:1.2; margin:0; white-space:pre-wrap; background:linear-gradient(135deg,#22d3ee,#8b5cf6); -webkit-background-clip:text; background-clip:text; color:transparent}
     .brado-sub{margin-top:8px; color:#cbd5e1}
 
-    /* Calendário */
     .calendar-embed{width:100%; height:650px; border:0; border-radius:12px}
   </style>
 </head>
 <body>
   <header>
-    <!-- Substitua logo.png pelo nome/caminho do seu logo -->
     <img src="01.jpeg">
     <h1>1º PELOTÃO</h1>
   </header>
-
   <main>
     <div class="tabs">
       <button class="tab-btn active" data-tab="missoes">Missões</button>
       <button class="tab-btn" data-tab="planilha">Planilha</button>
       <button class="tab-btn" data-tab="brado">Brado</button>
       <button class="tab-btn" data-tab="calendario">Calendário</button>
+      <button class="tab-btn" data-tab="calculadora">Calculadora</button>
     </div>
 
-    <!-- TAB: MISSÕES (Google Docs editável) -->
     <section id="tab-missoes" class="card" role="region" aria-labelledby="missoes">
       <h3 id="missoes" style="margin-top:0">Missões e Avisos (Google Docs)</h3>
-
-      <!-- 🔁 TROQUE SEU_ID_DO_DOC PELO ID REAL DO SEU DOCUMENTO GOOGLE DOCS -->
-      <!-- Exemplo de ID: em https://docs.google.com/document/d/1AbCdEfGhIjKlMnOpQrStUvWXyz/edit -> o ID é 1AbCdEfGhIjKlMnOpQrStUvWXyz -->
-      <iframe
-        class="doc-embed"
-        src="https://docs.google.com/document/d/1AnRvLXn3jShoFib_lHk6VrBz36U5yzXxThT4LbE71nE/edit?usp=sharing"
-        title="Documento de Missões - Google Docs"
-        allow="clipboard-write; encrypted-media"
-        referrerpolicy="no-referrer-when-downgrade"
-        loading="lazy">
-      </iframe>
-
+      <iframe class="doc-embed" src="https://docs.google.com/document/d/1AnRvLXn3jShoFib_lHk6VrBz36U5yzXxThT4LbE71nE/edit?usp=sharing" title="Documento de Missões - Google Docs" allow="clipboard-write; encrypted-media" referrerpolicy="no-referrer-when-downgrade" loading="lazy"></iframe>
       <div class="actions">
-        <!-- Botão direto para editar em nova aba (útil caso o navegador bloqueie o iframe) -->
-        <a class="btn primary" href="https://docs.google.com/document/d/SEU_ID_DO_DOC/edit?usp=sharing" target="_blank" rel="noopener">Abrir no Google Docs (Editar)</a>
-        <!-- Link de visualização rápida (somente leitura) -->
-        <a class="btn" href="https://docs.google.com/document/d/SEU_ID_DO_DOC/preview" target="_blank" rel="noopener">Visualizar</a>
+        <a class="btn primary" href="https://docs.google.com/document/d/1AnRvLXn3jShoFib_lHk6VrBz36U5yzXxThT4LbE71nE/edit?usp=sharing" target="_blank" rel="noopener">Abrir no Google Docs (Editar)</a>
+        <a class="btn" href="https://docs.google.com/document/d/1AnRvLXn3jShoFib_lHk6VrBz36U5yzXxThT4LbE71nE/preview" target="_blank" rel="noopener">Visualizar</a>
       </div>
-
-      <p class="hint">Dica: no Google Docs, defina <em>Compartilhar → Geral → Qualquer pessoa com o link</em> e escolha <strong>Editor</strong> para permitir edições por todos.
-      Caso algum navegador bloqueie o embed, use o botão "Abrir no Google Docs".</p>
+      <p class="hint">Dica: no Google Docs, defina <em>Compartilhar → Geral → Qualquer pessoa com o link</em> e escolha <strong>Editor</strong>.</p>
     </section>
 
-    <!-- TAB: PLANILHA -->
     <section id="tab-planilha" class="card" style="display:none" role="region" aria-labelledby="planilha">
       <h3 style="margin-top:0">Planilha colaborativa</h3>
       <div class="sheet-wrap">
-        <iframe
-          src="https://docs.google.com/spreadsheets/d/1_BhxQnJAxU-iqJ-qO2PduEzpryWef445/edit?usp=sharing&ouid=106648772678642799071&rtpof=true&sd=true"
-          title="Planilha da Turma">
-        </iframe>
+        <iframe src="https://docs.google.com/spreadsheets/d/1_BhxQnJAxU-iqJ-qO2PduEzpryWef445/edit?usp=sharing&ouid=106648772678642799071&rtpof=true&sd=true" title="Planilha da Turma"></iframe>
       </div>
-      <p class="hint">Se a planilha não permitir edição, verifique as permissões de compartilhamento no Google Sheets ("Qualquer pessoa com o link" → Editor).</p>
+      <p class="hint">Se a planilha não permitir edição, verifique as permissões no Google Sheets.</p>
     </section>
 
-    <!-- TAB: BRADO -->
     <section id="tab-brado" class="card" style="display:none" role="region" aria-labelledby="brado">
       <h3 style="margin-top:0">Brado do Pelotão</h3>
       <div class="brado">
@@ -116,39 +90,37 @@ Brigada!</pre>
       </div>
     </section>
 
-    <!-- TAB: CALENDÁRIO -->
     <section id="tab-calendario" class="card" style="display:none" role="region" aria-labelledby="calendario">
       <h3 style="margin-top:0">Calendário da Turma</h3>
-      <iframe class="calendar-embed"
-              src="https://calendar.google.com/calendar/embed?src=c9277dbf896848e62a3f6909aeee4c34c78c343b551c4950b571521d0862ae38%40group.calendar.google.com&ctz=America%2FSao_Paulo"
-              title="Calendário da Turma"></iframe>
-      <p class="hint">Este calendário é exibido aqui no portal. Para editar, abra o Google Agenda com sua conta.</p>
+      <iframe class="calendar-embed" src="https://calendar.google.com/calendar/embed?src=c9277dbf896848e62a3f6909aeee4c34c78c343b551c4950b571521d0862ae38%40group.calendar.google.com&ctz=America%2FSao_Paulo" title="Calendário da Turma"></iframe>
+      <p class="hint">Este calendário é exibido aqui no portal.</p>
+    </section>
+
+    <section id="tab-calculadora" class="card" style="display:none" role="region" aria-labelledby="calculadora">
+      <h3 style="margin-top:0">Calculadora TAF</h3>
+      <a class="btn primary" href="https://16bpm.sgo.seg.br/taf" target="_blank" rel="noopener">Abrir Calculadora Externa</a>
     </section>
   </main>
 
   <script>
-    // Alternância de abas
     const tabs = document.querySelectorAll('.tab-btn');
-    const tabMissoes   = document.getElementById('tab-missoes');
-    const tabPlanilha  = document.getElementById('tab-planilha');
-    const tabBrado     = document.getElementById('tab-brado');
-    const tabCalendario= document.getElementById('tab-calendario');
-
-    tabs.forEach(btn=>{
-      btn.addEventListener('click', ()=>{
-        tabs.forEach(b=>b.classList.remove('active'));
+    const tabSections = {
+      missoes: document.getElementById('tab-missoes'),
+      planilha: document.getElementById('tab-planilha'),
+      brado: document.getElementById('tab-brado'),
+      calendario: document.getElementById('tab-calendario'),
+      calculadora: document.getElementById('tab-calculadora')
+    };
+    tabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabs.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         const t = btn.dataset.tab;
-        tabMissoes.style.display   = (t==='missoes') ? 'block' : 'none';
-        tabPlanilha.style.display  = (t==='planilha') ? 'block' : 'none';
-        tabBrado.style.display     = (t==='brado')    ? 'block' : 'none';
-        tabCalendario.style.display= (t==='calendario') ? 'block' : 'none';
+        Object.entries(tabSections).forEach(([key, section]) => {
+          section.style.display = (t === key) ? 'block' : 'none';
+        });
       });
     });
-
-    // 🔧 Removido: lógica antiga de localStorage para textarea de missões
   </script>
 </body>
 </html>
-
-
